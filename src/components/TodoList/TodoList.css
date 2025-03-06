@@ -1,0 +1,87 @@
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Ensures it takes full width */
+    background: white;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+    box-sizing: border-box; /* Prevents unwanted width issues */
+  }
+  
+  /* Ensure each element gets the correct proportion */
+  /* .todo-text {
+    flex: 0 0 40%;  
+    font-size: 16px;
+    color: #333;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+  } */
+  
+  .todo-text {
+    flex: 0 0 35%;
+    font-size: 16px;
+    color: #333;
+    word-wrap: break-word; /* Allows breaking words */
+    overflow-wrap: break-word; /* Ensures long words break */
+    text-align: left;
+    white-space: normal; /* Allows wrapping */
+  }
+  
+  
+  
+  .priority {
+    flex: 0 0 25%;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-transform: capitalize;
+    text-align: center;
+  }
+  
+  /* Priority Colors */
+  .low {
+    background: #c3e6cb;
+    color: #155724;
+  }
+  
+  .medium {
+    background: #ffeeba;
+    color: #856404;
+  }
+  
+  .high {
+    background: #f8d7da;
+    color: #721c24;
+  }
+  
+  .due-date {
+    flex: 0 0 25%;
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+  }
+  
+  .delete-btn {
+    flex: 0 0 10%;
+    background: #ff4d4d;
+    border: none;
+    color: white;
+    padding: 3px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+    text-align: center;
+  }
+  
+  .delete-btn:hover {
+    background: #cc0000;
+  }
+  
+  /* Make sure parent container allows full width */
+  .tasks {
+    width: 100%;
+  }

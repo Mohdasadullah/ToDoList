@@ -1,0 +1,205 @@
+/* Reset default styles */
+body {
+  background: url('https://thumbs.dreamstime.com/b/desk-notepad-to-do-list-pens-light-pink-background-top-view-desk-notepad-to-do-list-pens-light-pink-125175912.jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* Main container */
+.app {
+  width: 100%;
+  max-width: 700px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Todo App Heading */
+.todo-app-heading {
+  font-size: 28px;
+  font-weight: bold;
+  background-color: white;
+  padding: 15px 0;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Content wrapper */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Task Input Section */
+.task-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-input input,
+.task-input select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.task-input button {
+  padding: 10px;
+  background: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.task-input button:hover {
+  background: #218838;
+}
+
+/* Todo List */
+.todo-list {
+  margin-top: 10px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Todo Item */
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.todo-item:last-child {
+  border-bottom: none;
+}
+
+/* Category Styling */
+.category-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.category-section {
+  margin-top: 15px;
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Priority Styling */
+.priority {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.priority.low {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.priority.medium {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.priority.high {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Delete Button */
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: red;
+}
+
+/* .logout-button {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  margin: 20px auto;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  border-radius: 5px;
+} */
+
+.logout-button {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  display: block;  /* Ensures full width usage */
+  width: 100%; /* Makes it same width as the "Add" button */
+  max-width: 200px; /* Limits button width */
+  text-align: center;
+  margin: 20px auto; /* Centers it */
+  font-size: 16px;
+  border-radius: 5px;
+  position: relative; /* Removes unwanted offset */
+  left: auto;
+  bottom: auto;
+  transform: none;
+}
+
+
+.logout-button:hover {
+  background-color: darkred;
+}
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .app {
+    width: 95%;
+  }
+
+  .task-input {
+    flex-direction: column;
+  }
+
+  .todo-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
